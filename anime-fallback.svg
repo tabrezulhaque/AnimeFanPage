@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-label="Anime image fallback">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b2742"/>
+      <stop offset="100%" stop-color="#0f1728"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffb463"/>
+      <stop offset="100%" stop-color="#68c6ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  <circle cx="480" cy="120" r="120" fill="#2a3b62" opacity="0.35"/>
+  <circle cx="120" cy="690" r="140" fill="#284a58" opacity="0.28"/>
+  <rect x="70" y="220" width="460" height="340" rx="22" fill="#15213b" stroke="#31466f" stroke-width="3"/>
+  <rect x="95" y="245" width="410" height="10" rx="5" fill="url(#accent)" opacity="0.9"/>
+  <text x="300" y="375" text-anchor="middle" fill="#e8f1ff" font-size="44" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    AnimeFanPage
+  </text>
+  <text x="300" y="420" text-anchor="middle" fill="#b9cce9" font-size="22" font-family="Arial, Helvetica, sans-serif">
+    Image unavailable
+  </text>
+  <text x="300" y="690" text-anchor="middle" fill="#9eb4d9" font-size="20" font-family="Arial, Helvetica, sans-serif">
+    Poster will appear when source loads
+  </text>
+</svg>

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnimeFanPage | Top IMDb-Rated Anime</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <header class="hero">
+      <p class="eyebrow">AnimeFanPage</p>
+      <h1>Top 10 IMDb Anime Series + Movies</h1>
+      <p class="hero-copy">
+        Live fan board powered by Tab with IMDb title ratings, watch links, and official reading sources.
+      </p>
+      <div class="meta-row">
+        <p id="lastUpdated">Updated: loading...</p>
+        <button id="refreshBtn" class="btn">Refresh IMDb Ratings</button>
+      </div>
+      <div class="global-search-wrap">
+        <label for="globalAnimeSearch" class="sr-only">Search anime from listed titles</label>
+        <input
+          id="globalAnimeSearch"
+          type="search"
+          list="animeSuggestions"
+          placeholder="Search any listed anime..."
+          autocomplete="off"
+        />
+        <datalist id="animeSuggestions"></datalist>
+        <button id="findAnimeBtn" class="btn btn-alt">Find Anime</button>
+      </div>
+      <p class="legal-note">
+        This site does not host or download manga/video files. Watch links are legal source finders and official channels; free availability depends on region.
+      </p>
+    </header>
+
+    <nav class="section-tabs" aria-label="Section Tabs">
+      <a href="#masterpieceSection">My Fav 5 masterpieces of all time</a>
+      <a href="#myFavSection">My Favourite</a>
+      <a href="#lightheartedSection">Top 10 light hearted Animes</a>
+      <a href="#loveSection">Top 10 Love Stories</a>
+      <a href="#voidSection">Animes That Create a Void Inside You - Purely basis my experience</a>
+      <a href="#seriesSection">Top 10 Anime Series basis imdb rating</a>
+      <a href="#moviesSection">Top 10 Anime Movies basis imdb rating</a>
+    </nav>
+
+    <main>
+      <section class="panel" id="masterpieceSection">
+        <div class="panel-head">
+          <h2>My Fav 5 masterpieces of all time</h2>
+        </div>
+        <p id="masterpieceStatusBanner" class="status">Loading My Fav 5 masterpieces of all time...</p>
+        <div id="masterpieceGrid" class="anime-grid"></div>
+      </section>
+
+      <section class="panel" id="myFavSection">
+        <div class="panel-head">
+          <h2>My Favourite</h2>
+        </div>
+        <p id="tabsFavStatusBanner" class="status">Loading My Favourite list...</p>
+        <div id="tabsFavGrid" class="anime-grid"></div>
+      </section>
+
+      <section class="panel" id="lightheartedSection">
+        <div class="panel-head">
+          <h2>Top 10 light hearted Animes</h2>
+        </div>
+        <p id="lightheartedStatusBanner" class="status">Loading light hearted anime picks...</p>
+        <div id="lightheartedGrid" class="anime-grid"></div>
+      </section>
+
+      <section class="panel" id="loveSection">
+        <div class="panel-head">
+          <h2>Top 10 Love Stories</h2>
+        </div>
+        <p id="loveStatusBanner" class="status">Loading Top 10 Love Stories...</p>
+        <div id="loveGrid" class="anime-grid"></div>
+      </section>
+
+      <section class="panel" id="voidSection">
+        <div class="panel-head">
+          <h2>Animes That Create a Void Inside You - Purely basis my experience</h2>
+        </div>
+        <p id="voidStatusBanner" class="status">Loading emotional anime list...</p>
+        <div id="voidGrid" class="anime-grid"></div>
+      </section>
+
+      <section class="panel" id="seriesSection">
+        <div class="panel-head">
+          <h2>Top 10 Anime Series basis imdb rating</h2>
+          <input id="seriesSearchInput" type="search" placeholder="Search anime series..." />
+        </div>
+        <p id="seriesStatusBanner" class="status">Loading series rankings...</p>
+        <div id="seriesGrid" class="anime-grid"></div>
+      </section>
+
+      <section class="panel" id="moviesSection">
+        <div class="panel-head">
+          <h2>Top 10 Anime Movies basis imdb rating</h2>
+          <input id="movieSearchInput" type="search" placeholder="Search anime movie..." />
+        </div>
+        <p id="movieStatusBanner" class="status">Loading movie rankings...</p>
+        <div id="movieGrid" class="anime-grid"></div>
+      </section>
+
+      <section class="panel reader-panel">
+        <h2>Official Reader Zone (Series + Movies)</h2>
+        <p class="reader-help">
+          Choose a title and open an official source below. If embed view is blocked by that website, use "Open in New Tab".
+        </p>
+        <div class="reader-controls">
+          <select id="animeSelect"></select>
+          <select id="sourceSelect"></select>
+          <button id="readInlineBtn" class="btn">Read In Page</button>
+          <button id="openTabBtn" class="btn btn-alt">Open in New Tab</button>
+        </div>
+        <iframe
+          id="mangaFrame"
+          title="Official source reader"
+          referrerpolicy="no-referrer"
+          sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+        ></iframe>
+      </section>
+
+      <section class="panel learning-panel" id="learningPanel">
+        <h2>Life Lessons</h2>
+        <p class="reader-help">
+          Click a card's <strong>Life Lessons</strong> button to see story meaning, protagonist lessons, character teachings, life impact, and emotional depth.
+        </p>
+        <div id="learningContent" class="learning-content">
+          <div class="lesson-hero">
+            <img id="learningProtagonistImage" src="" alt="Protagonist portrait" />
+            <div class="lesson-hero-copy">
+              <p class="lesson-kicker">Protagonist Focus</p>
+              <h3 id="learningTitle">Select Any Anime</h3>
+              <p id="learningDepth" class="depth-pill"></p>
+            </div>
+          </div>
+
+          <div class="lesson-grid">
+            <article class="lesson-block">
+              <h4>About This Story</h4>
+              <p id="learningAbout">Your life-lesson summary will appear here.</p>
+            </article>
+            <article class="lesson-block">
+              <h4>Protagonist Lesson</h4>
+              <p id="learningProtagonist"></p>
+            </article>
+            <article class="lesson-block">
+              <h4>Core Life Teaching</h4>
+              <p id="learningTeaches"></p>
+            </article>
+            <article class="lesson-block">
+              <h4>Real-Life Impact</h4>
+              <p id="learningImpact"></p>
+            </article>
+            <article class="lesson-block lesson-block-wide">
+              <h4>Character Teachings</h4>
+              <ul id="learningCharacters" class="character-list"></ul>
+            </article>
+            <article class="lesson-block lesson-block-wide">
+              <h4 id="learningEmotionHeading">Why It Can Break You Emotionally</h4>
+              <p id="learningVoidReason" class="void-reason"></p>
+            </article>
+            <article class="lesson-block lesson-block-wide love-extra-block" id="loveExtrasBlock" hidden>
+              <h4>Love Story Lens</h4>
+              <div class="love-extra-grid">
+                <p><strong>Why This Love Feels Real:</strong> <span id="learningLoveFeelsReal"></span></p>
+                <p><strong>Love Type:</strong> <span id="learningLoveType"></span></p>
+                <p><strong>Will It Break You or Heal You:</strong> <span id="learningLoveOutcome"></span></p>
+                <p><strong>After-Watch Feeling:</strong> <span id="learningAfterWatchFeeling"></span></p>
+                <p><strong>If You Loved This Watch Next:</strong> <span id="learningWatchNext"></span></p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="lesson-nav-actions">
+          <button id="backToTopBtn" class="btn btn-alt" type="button">Back To Top</button>
+          <button id="backToCurrentSectionBtn" class="btn" type="button">Back To Current Section</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Data source: IMDb GraphQL title ratings + IMDb title metadata. Fan project for personal/educational use.
+      </p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
