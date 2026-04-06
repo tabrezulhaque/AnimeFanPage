@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Bangers&family=Outfit:wght@300;400;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260407-1" />
+    <link rel="stylesheet" href="./styles.css?v=20260407-2" />
   </head>
   <body>
     <div class="bg-orb orb-a"></div>
@@ -45,6 +45,7 @@
 
     <nav class="section-tabs" aria-label="Section Tabs">
       <a href="#masterpieceSection">My Fav 5 masterpieces of all time</a>
+      <a href="#myDeviceFavouritesSection">My Watchlist</a>
       <a href="#myFavSection">Best Anime series</a>
       <a href="#lightheartedSection">Top 10 light hearted Animes</a>
       <a href="#loveSection">Best Anime Love Stories Ever</a>
@@ -54,6 +55,17 @@
     </nav>
 
     <main>
+      <section class="panel my-fav-device-panel" id="myDeviceFavouritesSection">
+        <div class="panel-head">
+          <h2>My Watchlist</h2>
+          <button id="clearMyFavouritesBtn" class="btn btn-alt" type="button">Clear My Watchlist</button>
+        </div>
+        <p id="myDeviceFavStatus" class="status">
+          Tap <strong>Add To My Watchlist</strong> on any anime to make your watchlist.
+        </p>
+        <div id="myDeviceFavGrid" class="anime-grid my-fav-grid"></div>
+      </section>
+
       <section class="panel" id="masterpieceSection">
         <div class="panel-head">
           <h2>My Fav 5 masterpieces of all time</h2>
@@ -189,6 +201,6 @@
       </p>
     </footer>
 
-    <script src="./script.js?v=20260407-1"></script>
+    <script src="./script.js?v=20260407-2"></script>
   </body>
 </html>

@@ -2424,6 +2424,7 @@ const PROTAGONIST_QUOTES = {
 };
 
 const LOCAL_IMAGE_FALLBACK = "./anime-fallback.svg";
+const MY_FAV_STORAGE_KEY = "animefan_my_watchlist_v1";
 const GRAPHQL_ENDPOINT = "https://caching.graphql.imdb.com/";
 const GRAPHQL_QUERY = `
   query ($id: ID!) {
@@ -2454,6 +2455,8 @@ const state = {
   voidItems: [],
   lightheartedItems: [],
   loveItems: [],
+  userFavouriteItems: [],
+  userFavouriteIds: new Set(),
   seriesFiltered: [],
   movieFiltered: [],
   readerCatalog: [],
@@ -2467,6 +2470,7 @@ const masterpieceGrid = document.getElementById("masterpieceGrid");
 const voidGrid = document.getElementById("voidGrid");
 const lightheartedGrid = document.getElementById("lightheartedGrid");
 const loveGrid = document.getElementById("loveGrid");
+const myDeviceFavGrid = document.getElementById("myDeviceFavGrid");
 const seriesStatusBanner = document.getElementById("seriesStatusBanner");
 const movieStatusBanner = document.getElementById("movieStatusBanner");
 const tabsFavStatusBanner = document.getElementById("tabsFavStatusBanner");
@@ -2474,8 +2478,10 @@ const masterpieceStatusBanner = document.getElementById("masterpieceStatusBanner
 const voidStatusBanner = document.getElementById("voidStatusBanner");
 const lightheartedStatusBanner = document.getElementById("lightheartedStatusBanner");
 const loveStatusBanner = document.getElementById("loveStatusBanner");
+const myDeviceFavStatus = document.getElementById("myDeviceFavStatus");
 const lastUpdated = document.getElementById("lastUpdated");
 const refreshBtn = document.getElementById("refreshBtn");
+const clearMyFavouritesBtn = document.getElementById("clearMyFavouritesBtn");
 const seriesSearchInput = document.getElementById("seriesSearchInput");
 const movieSearchInput = document.getElementById("movieSearchInput");
 const globalAnimeSearch = document.getElementById("globalAnimeSearch");
@@ -2510,6 +2516,7 @@ let sectionFocusResetId = null;
 let currentLearningSectionId = null;
 
 const CONTEXT_SECTION_MAP = {
+  userFavorite: { id: "myDeviceFavouritesSection", label: "My Watchlist" },
   masterpiece: { id: "masterpieceSection", label: "My Fav 5 masterpieces of all time" },
   favorite: { id: "myFavSection", label: "Best Anime series" },
   lighthearted: { id: "lightheartedSection", label: "Top 10 light hearted Animes" },
@@ -2537,11 +2544,17 @@ const lessonHoverImage = lessonHoverPreview.querySelector("img");
 const lessonHoverName = lessonHoverPreview.querySelector(".lesson-hover-name");
 const lessonHoverMsg = lessonHoverPreview.querySelector(".lesson-hover-msg");
 const lessonHoverQuote = lessonHoverPreview.querySelector(".lesson-hover-quote");
+const watchlistToast = document.createElement("div");
+watchlistToast.className = "watchlist-toast";
+watchlistToast.setAttribute("role", "status");
+watchlistToast.setAttribute("aria-live", "polite");
+document.body.appendChild(watchlistToast);
 const supportsHover =
   typeof window.matchMedia === "function" &&
   window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 let touchPreviewTarget = null;
 let lessonHoverAutoHideId = null;
+let watchlistToastHideId = null;
 
 function normalizeTitle(value) {
   return (value || "").toLowerCase().replace(/[^a-z0-9]/g, "");
@@ -2907,6 +2920,114 @@ function highlightAnimeCard(card) {
 
 function findCardForItem(item) {
   return document.querySelector(`.card[data-imdb-id="${item.imdbId}"]`);
+}
+
+function loadUserFavouriteIds() {
+  try {
+    const raw = localStorage.getItem(MY_FAV_STORAGE_KEY);
+    const parsed = JSON.parse(raw || "[]");
+    if (!Array.isArray(parsed)) {
+      return new Set();
+    }
+    return new Set(parsed.filter((id) => typeof id === "string" && id.trim().length > 0));
+  } catch (error) {
+    return new Set();
+  }
+}
+
+function persistUserFavouriteIds() {
+  try {
+    localStorage.setItem(MY_FAV_STORAGE_KEY, JSON.stringify(Array.from(state.userFavouriteIds)));
+  } catch (error) {
+    // Ignore storage write failures and keep UI usable.
+  }
+}
+
+function isUserFavourite(imdbId) {
+  return state.userFavouriteIds.has(imdbId);
+}
+
+function refreshFavouriteButtons(scope = document) {
+  scope.querySelectorAll("[data-toggle-favourite]").forEach((button) => {
+    const imdbId = button.dataset.toggleFavourite;
+    const saved = isUserFavourite(imdbId);
+    button.classList.toggle("is-saved", saved);
+    button.textContent = saved ? "Remove From My Watchlist" : "Add To My Watchlist";
+    button.setAttribute("aria-pressed", saved ? "true" : "false");
+  });
+}
+
+function buildUserFavouriteItems() {
+  return Array.from(state.userFavouriteIds)
+    .map((imdbId) => state.itemById.get(imdbId))
+    .filter(Boolean);
+}
+
+function renderUserFavouriteSection() {
+  if (!myDeviceFavGrid || !myDeviceFavStatus) {
+    return;
+  }
+
+  const items = buildUserFavouriteItems();
+  state.userFavouriteItems = items;
+
+  if (!items.length) {
+    myDeviceFavStatus.innerHTML =
+      'Tap <strong>Add To My Watchlist</strong> on any anime to make your watchlist.';
+    myDeviceFavGrid.innerHTML = "<p>No anime saved yet.</p>";
+    if (clearMyFavouritesBtn) {
+      clearMyFavouritesBtn.disabled = true;
+    }
+    return;
+  }
+
+  if (clearMyFavouritesBtn) {
+    clearMyFavouritesBtn.disabled = false;
+  }
+
+  myDeviceFavStatus.textContent = `${items.length} anime saved in My Watchlist on this browser/device.`;
+  renderGrid(items, myDeviceFavGrid, "userFavorite");
+  refreshFavouriteButtons(myDeviceFavGrid);
+}
+
+function toggleUserFavourite(imdbId) {
+  if (!imdbId) {
+    return;
+  }
+
+  const wasSaved = state.userFavouriteIds.has(imdbId);
+  if (wasSaved) {
+    state.userFavouriteIds.delete(imdbId);
+  } else {
+    state.userFavouriteIds.add(imdbId);
+  }
+
+  persistUserFavouriteIds();
+  renderUserFavouriteSection();
+  refreshFavouriteButtons();
+
+  const item = state.itemById.get(imdbId);
+  if (!wasSaved) {
+    showWatchlistToast(item?.title ? `${item.title} added to My Watchlist` : "Added to My Watchlist", "add");
+  } else {
+    showWatchlistToast(item?.title ? `${item.title} removed from My Watchlist` : "Removed from My Watchlist", "remove");
+  }
+}
+
+function showWatchlistToast(message, type = "add") {
+  if (!watchlistToast) {
+    return;
+  }
+  watchlistToast.textContent = message;
+  watchlistToast.classList.toggle("is-remove", type === "remove");
+  watchlistToast.classList.add("is-visible");
+  if (watchlistToastHideId) {
+    clearTimeout(watchlistToastHideId);
+  }
+  watchlistToastHideId = window.setTimeout(() => {
+    watchlistToast.classList.remove("is-visible");
+    watchlistToastHideId = null;
+  }, 1650);
 }
 
 function jumpToAnimeFromSearch() {
@@ -3359,6 +3480,7 @@ function showLearnings(item, context) {
 
 function cardMarkup(item, rank, context) {
   const imdbUrl = item.imdbUrl || `https://www.imdb.com/title/${item.imdbId}/`;
+  const savedInMyFavourite = isUserFavourite(item.imdbId);
   const sourceLinks = sourceLinksFor(item)
     .map((source) => `<a href="${source.url}" target="_blank" rel="noopener noreferrer">${source.label}</a>`)
     .join("");
@@ -3372,6 +3494,37 @@ function cardMarkup(item, rank, context) {
       ? MASTERPIECE_WRITEUPS[learning.entryKey] ||
         "This is a personal masterpiece pick for its storytelling depth and emotional power."
       : "";
+
+  if (context === "userFavorite") {
+    return `
+      <article class="card my-fav-card" data-imdb-id="${item.imdbId}" data-title="${item.title}">
+        <div class="my-fav-top">
+          <img
+            class="my-fav-thumb"
+            src="${posterImage}"
+            alt="${item.title} poster"
+            loading="lazy"
+            data-fallback-list="${posterFallbackData}"
+            data-fallback-index="0"
+            onerror="const list=(this.dataset.fallbackList||'').split('|').filter(Boolean).map((u)=>decodeURIComponent(u));const next=Number(this.dataset.fallbackIndex||0)+1;this.dataset.fallbackIndex=String(next);if(next<list.length){this.src=list[next];}else{this.onerror=null;this.src='${LOCAL_IMAGE_FALLBACK}';}"
+          />
+          <div>
+            <h3 class="title">${item.title}</h3>
+            <p class="my-fav-meta">IMDb ${item.rating.toFixed(1)} • ${item.year}</p>
+          </div>
+        </div>
+        <div class="my-fav-actions">
+          <button class="btn btn-alt" data-open-reader="${item.imdbId}">Read Source</button>
+          <button class="btn btn-learning" data-learning="${item.imdbId}" data-context="${context}">Life Lessons</button>
+          <button
+            class="btn btn-favourite-toggle is-saved"
+            data-toggle-favourite="${item.imdbId}"
+            aria-pressed="true"
+          >Remove From My Watchlist</button>
+        </div>
+      </article>
+    `;
+  }
 
   return `
     <article class="card" data-imdb-id="${item.imdbId}" data-title="${item.title}">
@@ -3404,6 +3557,11 @@ function cardMarkup(item, rank, context) {
         <div class="card-actions">
           <button class="btn" data-open-reader="${item.imdbId}">Read Source (Official)</button>
           <button class="btn btn-learning" data-learning="${item.imdbId}" data-context="${context}">Life Lessons</button>
+          <button
+            class="btn btn-favourite-toggle ${savedInMyFavourite ? "is-saved" : ""}"
+            data-toggle-favourite="${item.imdbId}"
+            aria-pressed="${savedInMyFavourite ? "true" : "false"}"
+          >${savedInMyFavourite ? "Remove From My Watchlist" : "Add To My Watchlist"}</button>
         </div>
         ${
           context === "love"
@@ -3493,6 +3651,12 @@ function attachCardButtons(container) {
       showLearnings(item, button.dataset.context || "");
     });
   });
+
+  container.querySelectorAll("[data-toggle-favourite]").forEach((button) => {
+    button.addEventListener("click", () => {
+      toggleUserFavourite(button.dataset.toggleFavourite || "");
+    });
+  });
 }
 
 function renderGrid(items, container, context) {
@@ -3529,7 +3693,8 @@ function hydrateReaderCatalog() {
     ...state.masterpieceItems,
     ...state.voidItems,
     ...state.lightheartedItems,
-    ...state.loveItems
+    ...state.loveItems,
+    ...state.userFavouriteItems
   ]);
 
   animeSelect.innerHTML = state.readerCatalog
@@ -3724,6 +3889,9 @@ async function loadAllSections({ force = false } = {}) {
   voidStatusBanner.textContent = "Refreshing emotional anime list...";
   lightheartedStatusBanner.textContent = "Refreshing light hearted anime picks...";
   loveStatusBanner.textContent = "Refreshing Best Anime Love Stories Ever...";
+  if (myDeviceFavStatus) {
+    myDeviceFavStatus.textContent = "Refreshing your saved watchlist...";
+  }
 
   const [seriesSet, movieSet, extraSet] = await Promise.all([
     loadItemSet(TV_CANDIDATES),
@@ -3768,9 +3936,11 @@ async function loadAllSections({ force = false } = {}) {
   applyMovieSearch();
   renderGrid(state.tabsFavItems, tabsFavGrid, "favorite");
   renderGrid(state.masterpieceItems, masterpieceGrid, "masterpiece");
+  renderUserFavouriteSection();
   renderGrid(state.voidItems, voidGrid, "void");
   renderGrid(state.lightheartedItems, lightheartedGrid, "lighthearted");
   renderGrid(state.loveItems, loveGrid, "love");
+  refreshFavouriteButtons();
   hydrateReaderCatalog();
   refreshGlobalSuggestions();
 
@@ -3798,6 +3968,14 @@ if (globalAnimeSearch) {
 }
 animeSelect.addEventListener("change", hydrateSourceSelect);
 openTabBtn.addEventListener("click", openSelectedSourceNewTab);
+if (clearMyFavouritesBtn) {
+  clearMyFavouritesBtn.addEventListener("click", () => {
+    state.userFavouriteIds.clear();
+    persistUserFavouriteIds();
+    renderUserFavouriteSection();
+    refreshFavouriteButtons();
+  });
+}
 if (backToTopBtn) {
   backToTopBtn.addEventListener("click", async () => {
     hideLessonHoverPreview();
@@ -3843,6 +4021,7 @@ document.addEventListener(
   },
   { passive: true }
 );
+state.userFavouriteIds = loadUserFavouriteIds();
 setupSectionTabNavigation();
 
 loadAllSections();
