@@ -582,6 +582,212 @@ const EXTRA_LIBRARY_ITEMS = [
     fallbackRating: 8.1,
     fallbackVotes: 12284,
     mangaSources: [{ label: "Yen Press", url: "https://yenpress.com/series/horimiya" }]
+  },
+  {
+    imdbId: "tt16428256",
+    title: "Suzume",
+    year: 2022,
+    image:
+      "https://myanimelist.net/images/anime/1598/128450l.jpg",
+    fallbackRating: 7.6,
+    fallbackVotes: 65000,
+    mangaSources: [
+      {
+        label: "Source Novel Search",
+        url: "https://www.google.com/search?q=suzume+light+novel+official+english"
+      },
+      {
+        label: "Manga Search",
+        url: "https://www.google.com/search?q=suzume+no+tojimari+manga+official+read"
+      }
+    ]
+  },
+  {
+    imdbId: "tt9426210",
+    title: "Weathering With You",
+    year: 2019,
+    image:
+      "https://myanimelist.net/images/anime/1880/101146l.jpg",
+    fallbackRating: 7.5,
+    fallbackVotes: 92000,
+    mangaSources: [
+      { label: "Kodansha Search", url: "https://kodansha.us/?s=weathering+with+you" },
+      {
+        label: "Source Novel Search",
+        url: "https://www.google.com/search?q=weathering+with+you+light+novel+official+english"
+      }
+    ]
+  },
+  {
+    imdbId: "tt0983213",
+    title: "5 Centimeters per Second",
+    year: 2007,
+    image:
+      "https://myanimelist.net/images/anime/1410/112994l.jpg",
+    fallbackRating: 7.5,
+    fallbackVotes: 47000,
+    mangaSources: [
+      { label: "Kodansha Search", url: "https://kodansha.us/?s=5+centimeters+per+second" },
+      {
+        label: "Manga Search",
+        url: "https://www.google.com/search?q=5+centimeters+per+second+manga+official+read"
+      }
+    ]
+  },
+  {
+    imdbId: "tt0810705",
+    title: "Nana",
+    year: 2006,
+    image:
+      "https://myanimelist.net/images/anime/2/11232l.jpg",
+    fallbackRating: 8.5,
+    fallbackVotes: 8400,
+    mangaSources: [
+      { label: "VIZ", url: "https://www.viz.com/nana" },
+      { label: "Manga Official Search", url: "https://www.google.com/search?q=nana+manga+official+read" }
+    ]
+  },
+  {
+    imdbId: "tt7865090",
+    title: "Darling in the Franxx",
+    year: 2018,
+    image:
+      "https://myanimelist.net/images/anime/1614/90408l.jpg",
+    fallbackRating: 7.3,
+    fallbackVotes: 19000,
+    mangaSources: [
+      {
+        label: "Seven Seas Search",
+        url: "https://sevenseasentertainment.com/?s=darling+in+the+franxx"
+      },
+      {
+        label: "Manga Official Search",
+        url: "https://www.google.com/search?q=darling+in+the+franxx+manga+official+read"
+      }
+    ]
+  },
+  {
+    imdbId: "tt21975436",
+    title: "Kaiju No. 8",
+    year: 2024,
+    image:
+      "https://myanimelist.net/images/anime/1370/140362l.jpg",
+    fallbackRating: 8.3,
+    fallbackVotes: 34500,
+    mangaSources: [
+      { label: "VIZ", url: "https://www.viz.com/kaiju-no-8" },
+      {
+        label: "MANGA Plus Search",
+        url: "https://mangaplus.shueisha.co.jp/search_result?keyword=Kaiju%20No.%208"
+      }
+    ]
+  },
+  {
+    imdbId: "tt3398540",
+    title: "Haikyu!!",
+    year: 2014,
+    image:
+      "https://myanimelist.net/images/anime/7/76014l.jpg",
+    fallbackRating: 8.7,
+    fallbackVotes: 43500,
+    mangaSources: [
+      { label: "VIZ Search", url: "https://www.viz.com/search?search=haikyu" },
+      { label: "Shonen Jump Search", url: "https://www.viz.com/shonenjump" }
+    ]
+  },
+  {
+    imdbId: "tt0481256",
+    title: "Hajime no Ippo",
+    year: 2000,
+    image:
+      "https://myanimelist.net/images/anime/4/86334l.jpg",
+    fallbackRating: 8.8,
+    fallbackVotes: 12900,
+    mangaSources: [
+      { label: "Kodansha Search", url: "https://kodansha.us/?s=hajime+no+ippo" },
+      { label: "Manga Official Search", url: "https://www.google.com/search?q=hajime+no+ippo+manga+official+read" }
+    ]
+  },
+  {
+    imdbId: "tt0988818",
+    title: "Gintama",
+    year: 2006,
+    image:
+      "https://myanimelist.net/images/anime/4/50361l.jpg",
+    fallbackRating: 8.7,
+    fallbackVotes: 20100,
+    mangaSources: [
+      { label: "VIZ Search", url: "https://www.viz.com/search?search=gintama" },
+      { label: "Manga Official Search", url: "https://www.google.com/search?q=gintama+manga+official+read" }
+    ]
+  },
+  {
+    imdbId: "tt5897304",
+    title: "Mob Psycho 100",
+    year: 2016,
+    image:
+      "https://myanimelist.net/images/anime/8/80356l.jpg",
+    fallbackRating: 8.6,
+    fallbackVotes: 94800,
+    mangaSources: [
+      { label: "Dark Horse Search", url: "https://www.darkhorse.com/Search/mob+psycho+100" },
+      { label: "Manga Official Search", url: "https://www.google.com/search?q=mob+psycho+100+manga+official+read" }
+    ]
+  },
+  {
+    imdbId: "tt2379308",
+    title: "Psycho-Pass",
+    year: 2012,
+    image:
+      "https://myanimelist.net/images/anime/1314/142015l.jpg",
+    fallbackRating: 8.2,
+    fallbackVotes: 64000,
+    mangaSources: [
+      { label: "Dark Horse Search", url: "https://www.darkhorse.com/Search/psycho-pass" },
+      { label: "Manga Official Search", url: "https://www.google.com/search?q=psycho-pass+manga+official+read" }
+    ]
+  },
+  {
+    imdbId: "tt3358020",
+    title: "Parasyte: The Maxim",
+    year: 2014,
+    image:
+      "https://myanimelist.net/images/anime/3/73178l.jpg",
+    fallbackRating: 8.3,
+    fallbackVotes: 88000,
+    mangaSources: [
+      { label: "Kodansha Series", url: "https://kodansha.us/series/parasyte/" },
+      { label: "Manga Official Search", url: "https://www.google.com/search?q=parasyte+manga+official+read" }
+    ]
+  },
+  {
+    imdbId: "tt15222080",
+    title: "Blue Lock",
+    year: 2022,
+    image:
+      "https://myanimelist.net/images/anime/1258/126929l.jpg",
+    fallbackRating: 8.2,
+    fallbackVotes: 41000,
+    mangaSources: [
+      { label: "Kodansha Series", url: "https://kodansha.us/series/blue-lock/" },
+      { label: "Manga Official Search", url: "https://www.google.com/search?q=blue+lock+manga+official+read" }
+    ]
+  },
+  {
+    imdbId: "tt3909224",
+    title: "The Seven Deadly Sins",
+    year: 2014,
+    image:
+      "https://myanimelist.net/images/anime/8/65409l.jpg",
+    fallbackRating: 7.8,
+    fallbackVotes: 40200,
+    mangaSources: [
+      { label: "Kodansha Series", url: "https://kodansha.us/series/the-seven-deadly-sins/" },
+      {
+        label: "Manga Official Search",
+        url: "https://www.google.com/search?q=the+seven+deadly+sins+manga+official+read"
+      }
+    ]
   }
 ];
 
@@ -595,13 +801,22 @@ const TABS_FAVOURITE_LIST = [
   "cyberpunk edge runners",
   "Code Geas",
   "Jujutsu Kaisen",
+  "Demon Slayer",
   "Made in Abyss",
   "Erased",
   "Steins: Gate",
+  "Kaiju No. 8",
+  "Haikyu!!",
   "Violet evergarden",
   "Naruto",
   "Black clover",
-  "Demon Slayer"
+  "Hajimo no ippo",
+  "Gintama",
+  "Mob psycho",
+  "Psycvho pass",
+  "Parasyte",
+  "Blue lock",
+  "Seven deadly sins"
 ];
 
 const VOID_LIST = [
@@ -620,7 +835,7 @@ const MASTERPIECE_LIST = [
   "Attack on titan",
   "Berserk",
   "Monster",
-  "Naruto"
+  "Fullmetal Alchemist"
 ];
 
 const LIGHTHEARTED_LIST = [
@@ -639,14 +854,16 @@ const LIGHTHEARTED_LIST = [
 const LOVE_STORY_LIST = [
   "Your Name.",
   "I Want to Eat Your Pancreas",
-  "Josee, the Tiger and the Fish",
   "A Silent Voice: The Movie",
-  "The Garden of Words",
+  "Weathering With You",
+  "Suzume",
+  "5 Centimeters per Second",
   "Clannad: After Story",
   "Fruits Basket",
-  "Kaguya-sama: Love Is War",
+  "Your Lie in April",
+  "Darling in the Franxx",
   "Toradora!",
-  "Horimiya"
+  "Nana"
 ];
 
 const TITLE_ALIASES = {
@@ -665,7 +882,21 @@ const TITLE_ALIASES = {
   yurucamp: "laidbackcamp",
   spyfamily: "spyxfamily",
   kiki: "kikisdeliveryservice",
-  iwanttoeatyourpancreasthemovie: "iwanttoeatyourpancreas"
+  iwanttoeatyourpancreasthemovie: "iwanttoeatyourpancreas",
+  haikyuu: "haikyu",
+  kaijunoeight: "kaijuno8",
+  hajimonoippo: "hajimenoippo",
+  fightingspirit: "hajimenoippo",
+  mobpsycho: "mobpsycho100",
+  psycvhopass: "psychopass",
+  parasyte: "parasytethemaxim",
+  sevendeadlysins: "thesevendeadlysins",
+  nanatsunotaizai: "thesevendeadlysins",
+  suzumenotojimari: "suzume",
+  tenkinoko: "weatheringwithyou",
+  byousoku5centimeter: "5centimeterspersecond",
+  darlinginfranx: "darlinginthefranxx",
+  darlinginthefranx: "darlinginthefranxx"
 };
 
 const MASTERPIECE_WRITEUPS = {
@@ -677,6 +908,8 @@ const MASTERPIECE_WRITEUPS = {
     "Berserk is a masterpiece because beneath its brutality lives one of anime's rawest portraits of human endurance. It is not only about darkness, it is about refusing to surrender your soul to darkness. Guts' struggle gives pain weight, but also gives survival dignity.",
   monster:
     "Monster is a masterpiece because it turns one ethical choice into a long, relentless meditation on conscience. It is psychologically precise, morally unsettling, and deeply humane. Instead of giving easy answers, it demands that you sit with responsibility long after the credits end.",
+  fullmetalalchemistbrotherhood:
+    "Fullmetal Alchemist: Brotherhood is a masterpiece because it balances heart, philosophy, and political consequence with almost no wasted motion. It turns grief, guilt, and ambition into a deeply moral journey about accountability, human dignity, and the true cost of power.",
   naruto:
     "Naruto is a masterpiece of long-form emotional storytelling. It transforms loneliness into leadership and turns revenge-driven conflict into a plea for empathy. Its greatest achievement is showing that persistence matters most when it protects people, not pride."
 };
@@ -738,6 +971,22 @@ const LOVE_TAGS = {
     afterWatchFeeling: "Comforted, seen, and emotionally safe.",
     watchNext: "Horimiya"
   },
+  yourlieinapril: {
+    loveFeelsReal:
+      "Its romance is built through art, silence, and emotional rescue. Kousei and Kaori do not just fall in love; they pull each other back toward life when both are emotionally fragile.",
+    loveType: "Healing-first love, tragic music romance",
+    breakOrHeal: "Breaks you, then leaves gratitude",
+    afterWatchFeeling: "Beautifully shattered, quiet, and deeply reflective.",
+    watchNext: "5 Centimeters per Second"
+  },
+  darlinginthefranxx: {
+    loveFeelsReal:
+      "Hiro and Zero Two's bond feels intense because it is tied to identity, survival, and acceptance. They choose each other even when the world defines them as broken or dangerous.",
+    loveType: "Rebellious soulmate bond in dystopian war",
+    breakOrHeal: "Bittersweet break-heal cycle",
+    afterWatchFeeling: "Emotionally charged, wistful, and attached to their journey.",
+    watchNext: "Eureka Seven"
+  },
   kaguyasamaloveiswar: {
     loveFeelsReal:
       "Behind comedy, both leads fear vulnerability. Their romance works because emotional pride slowly turns into genuine courage.",
@@ -761,6 +1010,38 @@ const LOVE_TAGS = {
     breakOrHeal: "Pure healing smile",
     afterWatchFeeling: "Peaceful, cozy, and emotionally refreshed.",
     watchNext: "Kaguya-sama: Love Is War"
+  },
+  weatheringwithyou: {
+    loveFeelsReal:
+      "Their romance grows under financial stress, runaway survival, and moral pressure, not dreamy perfection. Every choice they make has social consequences, which makes their bond feel urgent and human.",
+    loveType: "Fate-driven urban romance with moral conflict",
+    breakOrHeal: "Bittersweet healing",
+    afterWatchFeeling: "Emotionally stirred, rain-soaked, and quietly hopeful.",
+    watchNext: "Suzume"
+  },
+  suzume: {
+    loveFeelsReal:
+      "The connection forms through shared danger, grief, and responsibility. It is less about instant chemistry and more about two people learning to face loss while moving forward together.",
+    loveType: "Healing journey romance",
+    breakOrHeal: "Heal through tears",
+    afterWatchFeeling: "Cathartic, tender, and deeply reflective.",
+    watchNext: "Weathering With You"
+  },
+  "5centimeterspersecond": {
+    loveFeelsReal:
+      "It captures the love that timing could not protect. Distance, silence, and life phases slowly pull two hearts apart in a way that feels painfully realistic.",
+    loveType: "First love, distance tragedy",
+    breakOrHeal: "Breaks quietly",
+    afterWatchFeeling: "Lingering ache, nostalgia, and emotional stillness.",
+    watchNext: "Your Name."
+  },
+  nana: {
+    loveFeelsReal:
+      "It treats love as adult life actually is: passionate, flawed, messy, and shaped by career, ego, insecurity, and timing. Nothing feels sanitized.",
+    loveType: "Mature relationship drama, music-era romance",
+    breakOrHeal: "Break and mature",
+    afterWatchFeeling: "Heavy, unforgettable, and emotionally raw.",
+    watchNext: "Fruits Basket"
   }
 };
 
@@ -960,6 +1241,17 @@ const LEARNINGS = {
     emotionalDepth: "9.9/10",
     voidReason:
       "It breaks you because it teaches you how to feel alive again, then asks you to grieve what made that life possible. The final reveal does not erase the beauty, it makes that beauty ache forever."
+  },
+  darlinginthefranxx: {
+    about:
+      "A dystopian coming-of-age romance where Hiro and Zero Two search for identity in a system that treats children as tools. Their relationship is the emotional core that challenges control, fear, and dehumanization.",
+    teaches:
+      "It teaches that love can restore self-worth when the world strips identity away. It also warns that passion alone is not enough without trust, communication, and shared responsibility.",
+    impact:
+      "It resonates with viewers who have felt misunderstood or labeled, because it shows how one accepting relationship can become the turning point from self-rejection to self-belief.",
+    emotionalDepth: "8.8/10",
+    voidReason:
+      "It breaks you through intensity: devotion, sacrifice, and the feeling that love can be both your greatest rescue and your greatest wound."
   },
   onepiece: {
     about:
@@ -1298,6 +1590,131 @@ const LEARNINGS = {
     voidReason:
       "It breaks you in a bittersweet way because it exposes how much people hide behind attitude, then asks them to love honestly."
   },
+  kaijuno8: {
+    about:
+      "A fast, modern action story about Kafka Hibino, a man who feels left behind until fate gives him both power and responsibility at once. Beneath the monster fights, it is about second chances, self-worth, and finally becoming the person you promised you'd be.",
+    teaches:
+      "It teaches that age is never a disqualification for growth. You can start late, fail publicly, and still earn your place through discipline, humility, and service.",
+    impact:
+      "It strongly motivates viewers who feel too late in life. Kafka's arc reminds you that consistency, not perfect timing, is what rebuilds confidence.",
+    emotionalDepth: "8.6/10"
+  },
+  haikyu: {
+    about:
+      "A sports journey that turns volleyball into a story about identity, trust, and collective excellence. Every match is less about winning alone and more about learning how individual strengths become powerful only inside a true team.",
+    teaches:
+      "It teaches process over ego: preparation, communication, and respect for fundamentals. Talent matters, but growth belongs to those who keep showing up.",
+    impact:
+      "It helps in real life far beyond sports by building a team-first mindset, emotional resilience after failure, and confidence rooted in daily work.",
+    emotionalDepth: "8.9/10"
+  },
+  hajimenoippo: {
+    about:
+      "A deeply human boxing story about fear, discipline, and self-respect. Ippo does not become inspiring because he is naturally fearless; he becomes inspiring because he keeps stepping forward even when fear is still inside him.",
+    teaches:
+      "It teaches that confidence is earned through repetition and integrity. Hard work is not a motivational slogan here; it is a daily contract between who you are and who you want to become.",
+    impact:
+      "It pushes viewers toward long-term habits: training when nobody is watching, staying humble after progress, and respecting process over shortcuts.",
+    emotionalDepth: "9.1/10"
+  },
+  gintama: {
+    about:
+      "A rare masterpiece that hides existential pain inside absurd comedy. One episode can make you laugh uncontrollably, and the next can hit with grief, loyalty, and sacrifice that feel painfully real.",
+    teaches:
+      "It teaches emotional flexibility: humor is not escape, it can be survival. You can carry trauma, still protect people, and still choose kindness without becoming naive.",
+    impact:
+      "It helps people breathe through hard seasons. Gintama reminds you that maturity is not becoming serious all the time, it is knowing when to joke, when to fight, and when to stand for your values.",
+    emotionalDepth: "9.5/10"
+  },
+  mobpsycho100: {
+    about:
+      "A coming-of-age story where overwhelming psychic power is secondary to emotional growth. Mob's journey is about identity, self-worth, and learning that being a good person matters more than being an exceptional one.",
+    teaches:
+      "It teaches that power without emotional maturity is dangerous, and that real strength is self-control, empathy, and honest self-reflection.",
+    impact:
+      "It strongly reshapes how viewers see talent and status by showing that your value is not your output. You deserve respect because you are human, not because you are useful.",
+    emotionalDepth: "9.4/10"
+  },
+  psychopass: {
+    about:
+      "A dystopian moral thriller about surveillance, law, and state-controlled judgment. It constantly asks whether social order is worth preserving if that order quietly erases human freedom and moral nuance.",
+    teaches:
+      "It teaches that ethics cannot be outsourced to systems. Even advanced institutions need morally awake people willing to question unjust certainty.",
+    impact:
+      "It changes how viewers think about technology, policing, and governance in real life, especially around data-driven decisions that look objective but can still be deeply inhumane.",
+    emotionalDepth: "9.0/10"
+  },
+  parasytethemaxim: {
+    about:
+      "A body-horror thriller that evolves into a philosophical study of empathy and coexistence. As Shinichi changes, the story asks what truly defines humanity: biology, emotion, morality, or the choice to protect life.",
+    teaches:
+      "It teaches that survival without empathy turns cruel, but empathy without boundaries can become self-destruction. Wisdom lies in balancing compassion with self-preservation.",
+    impact:
+      "It leaves viewers questioning violence, ecological hierarchy, and moral identity in a way that lingers long after the ending.",
+    emotionalDepth: "9.1/10"
+  },
+  bluelock: {
+    about:
+      "An intense sports-psychology series built around ego, ambition, and ruthless competition. It reframes football as a battle of identity where hesitation costs everything.",
+    teaches:
+      "It teaches that healthy ego can be a fuel, not a flaw, when it is paired with skill-building and accountability. Belief without preparation is noise; belief with work becomes excellence.",
+    impact:
+      "It boosts goal-focus and performance mentality in real life, especially for people who need permission to think bigger and take ownership of their potential.",
+    emotionalDepth: "8.6/10"
+  },
+  thesevendeadlysins: {
+    about:
+      "A fantasy saga about broken heroes carrying guilt, curses, and unresolved history while still choosing to protect what they love. Its core is redemption through loyalty, not perfection.",
+    teaches:
+      "It teaches that your past mistakes do not cancel your future value, but redemption still requires responsibility, honesty, and sacrifice.",
+    impact:
+      "It resonates with viewers who feel flawed or behind in life by showing that strength can coexist with emotional scars and that chosen family can help rebuild identity.",
+    emotionalDepth: "8.7/10"
+  },
+  weatheringwithyou: {
+    about:
+      "A rain-drenched romance set inside economic hardship and social instability, where Hodaka and Hina's love grows while the sky itself demands a cost. It blends teenage longing with adult moral dilemma in a way that feels both cinematic and intimate.",
+    teaches:
+      "It teaches that love is not just emotion, it is responsibility. Wanting to save someone can be noble, but every rescue still carries consequences for the wider world.",
+    impact:
+      "It pushes viewers to think beyond romantic impulse and ask difficult questions: when your heart and society conflict, what kind of choice can you live with?",
+    emotionalDepth: "9.1/10",
+    voidReason:
+      "It breaks you because it refuses a clean moral answer. You feel the beauty of their bond, yet you also feel the weight of what that bond demands from everyone else."
+  },
+  suzume: {
+    about:
+      "A road-journey romance woven with grief, memory, and disaster healing. Suzume's emotional arc is not only about meeting Souta, it is about learning to comfort the younger self she abandoned in pain.",
+    teaches:
+      "It teaches emotional recovery through movement: face the places that hurt, honor the people you lost, and still choose to live with warmth.",
+    impact:
+      "It leaves viewers gentler with their own wounds. The story reframes healing as a series of small acts of care, not a single dramatic breakthrough.",
+    emotionalDepth: "9.3/10",
+    voidReason:
+      "It breaks you softly because beneath its fantasy doors is a very real grief story. By the end, the tenderness feels earned and deeply personal."
+  },
+  "5centimeterspersecond": {
+    about:
+      "A quiet, devastating portrait of first love over time, where trains, distance, and silence become emotional symbols of two lives moving out of sync. Its realism is what makes it unforgettable.",
+    teaches:
+      "It teaches that love can be true and still not survive timing. Emotional sincerity does not always guarantee emotional permanence.",
+    impact:
+      "It reshapes how viewers think about closure, missed chances, and emotional maturity. Sometimes healing means honoring what was beautiful without forcing it to continue.",
+    emotionalDepth: "9.5/10",
+    voidReason:
+      "It breaks you without dramatic tragedy. The pain comes from ordinary life itself, from how two sincere hearts can drift apart while still remembering each other."
+  },
+  nana: {
+    about:
+      "A mature romance-drama where two women named Nana navigate love, ambition, trauma, and identity in Tokyo. It is brutally honest about how relationships strain under adulthood, fame, insecurity, and emotional dependency.",
+    teaches:
+      "It teaches that love without self-awareness can become self-destruction, and that intimacy requires communication, boundaries, and emotional responsibility.",
+    impact:
+      "It deeply affects viewers because it mirrors real adult relationships: attachment wounds, jealousy, timing, and the painful gap between what we feel and what we can sustain.",
+    emotionalDepth: "9.7/10",
+    voidReason:
+      "It breaks you because almost every relationship in Nana feels recognizably human. The heartbreak is not fantasy heartbreak, it is the kind people carry in real life for years."
+  },
   horimiya: {
     about:
       "A grounded romance about seeing each other's unseen sides and building closeness through everyday trust, comfort, and acceptance.",
@@ -1471,6 +1888,15 @@ const CHARACTER_LESSONS = {
       "Kaori Miyazono teaches living boldly even with limited time.",
       "Tsubaki Sawabe teaches quiet love and everyday loyalty.",
       "Ryota Watari teaches friendship through encouragement."
+    ]
+  },
+  darlinginthefranxx: {
+    protagonist:
+      "Hiro and Zero Two teach that acceptance can rebuild identity, and that chosen bonds can challenge even the systems designed to erase individuality.",
+    characters: [
+      "Ichigo teaches emotional maturity, loyalty, and learning to let love evolve beyond possession.",
+      "Goro teaches patient, selfless care when feelings are not reciprocated.",
+      "Kokoro teaches the courage to choose tenderness and future over imposed social rules."
     ]
   },
   onepiece: {
@@ -1739,6 +2165,110 @@ const CHARACTER_LESSONS = {
       "Ami teaches self-awareness behind social masks."
     ]
   },
+  kaijuno8: {
+    protagonist: "Kafka Hibino teaches that a late start can still become a legendary comeback.",
+    characters: [
+      "Mina Ashiro teaches relentless excellence and duty to the mission.",
+      "Reno Ichikawa teaches disciplined growth and respect for mentors.",
+      "Kikoru Shinomiya teaches confidence that matures into true teamwork."
+    ]
+  },
+  haikyu: {
+    protagonist: "Shoyo Hinata teaches that heart, effort, and adaptation can outgrow natural limitations.",
+    characters: [
+      "Tobio Kageyama teaches precision, accountability, and evolving from control to trust.",
+      "Daichi Sawamura teaches quiet leadership and emotional stability under pressure.",
+      "Tetsuro Kuroo teaches strategic thinking and turning rivalry into growth."
+    ]
+  },
+  hajimenoippo: {
+    protagonist: "Ippo Makunouchi teaches that courage is continuing despite fear, not being fearless.",
+    characters: [
+      "Mamoru Takamura teaches ruthless standards and turning talent into achievement.",
+      "Genji Kamogawa teaches discipline, fundamentals, and coach-student trust.",
+      "Ichiro Miyata teaches technical precision and quiet professional pride."
+    ]
+  },
+  gintama: {
+    protagonist: "Gintoki Sakata teaches protecting your people while carrying pain without glorifying it.",
+    characters: [
+      "Kagura teaches fierce loyalty and strength with emotional honesty.",
+      "Shinpachi Shimura teaches moral consistency and grounded integrity.",
+      "Toshiro Hijikata teaches duty, structure, and leadership under chaos."
+    ]
+  },
+  mobpsycho100: {
+    protagonist: "Shigeo Kageyama teaches emotional control, humility, and self-worth beyond raw ability.",
+    characters: [
+      "Arataka Reigen teaches practical wisdom, empathy, and owning your flaws.",
+      "Ritsu Kageyama teaches ambition guided by conscience.",
+      "Dimple teaches that even selfish people can evolve through connection."
+    ]
+  },
+  psychopass: {
+    protagonist: "Akane Tsunemori teaches moral clarity inside systems that reward obedience over conscience.",
+    characters: [
+      "Shinya Kogami teaches conviction and the cost of justice pursued alone.",
+      "Nobuchika Ginoza teaches growth from rigid judgment toward human empathy.",
+      "Shogo Makishima teaches how intelligence without ethics becomes predatory."
+    ]
+  },
+  parasytethemaxim: {
+    protagonist: "Shinichi Izumi teaches adapting under trauma without surrendering your humanity.",
+    characters: [
+      "Migi teaches strategic thinking and the value of unemotional clarity.",
+      "Satomi Murano teaches empathy and emotional grounding when identity is unstable.",
+      "Ryoko Tamiya teaches unsettling truths about instinct, learning, and motherhood."
+    ]
+  },
+  bluelock: {
+    protagonist: "Yoichi Isagi teaches reading the game, trusting your hunger, and acting decisively.",
+    characters: [
+      "Meguru Bachira teaches creative freedom and fearless self-expression.",
+      "Rin Itoshi teaches elite discipline and performance under pressure.",
+      "Jinpachi Ego teaches that ambition must be sharpened through ruthless accountability."
+    ]
+  },
+  thesevendeadlysins: {
+    protagonist: "Meliodas teaches carrying immense power with loyalty and restraint.",
+    characters: [
+      "Elizabeth teaches compassion and emotional resilience through repeated loss.",
+      "Ban teaches devotion, sacrifice, and loving without possession.",
+      "Escanor teaches dignity, confidence, and protecting others with pride."
+    ]
+  },
+  weatheringwithyou: {
+    protagonist: "Hodaka Morishima teaches choosing love while learning to live with consequence.",
+    characters: [
+      "Hina Amano teaches sacrifice, tenderness, and protecting others even at personal cost.",
+      "Keisuke Suga teaches flawed adulthood and the courage to care despite emotional burnout.",
+      "Natsumi Suga teaches warmth and practical resilience in uncertain city life."
+    ]
+  },
+  suzume: {
+    protagonist: "Suzume Iwato teaches turning grief into motion, and motion into healing.",
+    characters: [
+      "Souta Munakata teaches duty, patience, and protecting people even when misunderstood.",
+      "Tamaki Iwato teaches complicated family love and the need for emotional honesty.",
+      "Daijin teaches that attachment can be innocent, but still emotionally disruptive."
+    ]
+  },
+  "5centimeterspersecond": {
+    protagonist: "Takaki Toono teaches that memory can shape you, but must not imprison your future.",
+    characters: [
+      "Akari Shinohara teaches quiet devotion and the pain of love separated by time.",
+      "Kanae Sumida teaches unspoken love, courage, and the ache of emotional timing.",
+      "The passing years teach that maturity often means accepting what cannot be restored."
+    ]
+  },
+  nana: {
+    protagonist: "Nana Osaki teaches fierce independence, creative ambition, and the cost of emotional armor.",
+    characters: [
+      "Nana Komatsu teaches vulnerability, attachment, and the hard journey toward self-respect.",
+      "Ren Honjo teaches passion, dependency, and how unresolved pain can consume love.",
+      "Yasu Takagi teaches emotional steadiness, accountability, and quiet support under chaos."
+    ]
+  },
   horimiya: {
     protagonist: "Izumi Miyamura teaches self-acceptance and trusting someone with your true self.",
     characters: [
@@ -1770,6 +2300,7 @@ const PROTAGONIST_IMAGES = {
   asilentvoicethemovie: "https://myanimelist.net/images/characters/8/302316.jpg",
   barefootgen: "https://myanimelist.net/images/characters/4/357629.jpg",
   yourlieinapril: "https://myanimelist.net/images/characters/4/273755.jpg",
+  darlinginthefranxx: "https://myanimelist.net/images/characters/14/559013.jpg",
   onepiece: "https://myanimelist.net/images/characters/9/310307.jpg",
   deathnote: "https://myanimelist.net/images/characters/6/63870.jpg",
   cowboybebop: "https://myanimelist.net/images/characters/11/516853.jpg",
@@ -1805,7 +2336,20 @@ const PROTAGONIST_IMAGES = {
   fruitsbasket: "https://myanimelist.net/images/characters/7/132087.jpg",
   kaguyasamaloveiswar: "https://myanimelist.net/images/characters/2/381091.jpg",
   toradora: "https://myanimelist.net/images/characters/7/82305.jpg",
-  horimiya: "https://myanimelist.net/images/characters/13/407377.jpg"
+  horimiya: "https://myanimelist.net/images/characters/13/407377.jpg",
+  kaijuno8: "https://myanimelist.net/images/characters/14/552100.jpg",
+  haikyu: "https://myanimelist.net/images/characters/9/308852.jpg",
+  hajimenoippo: "https://myanimelist.net/images/characters/16/74142.jpg",
+  gintama: "https://myanimelist.net/images/characters/15/241479.jpg",
+  mobpsycho100: "https://myanimelist.net/images/characters/6/343344.jpg",
+  psychopass: "https://myanimelist.net/images/characters/9/179601.jpg",
+  parasytethemaxim: "https://myanimelist.net/images/characters/6/269013.jpg",
+  bluelock: "https://myanimelist.net/images/characters/6/558080.jpg",
+  thesevendeadlysins: "https://myanimelist.net/images/characters/2/255447.jpg",
+  suzume: "https://myanimelist.net/images/characters/2/470108.jpg",
+  weatheringwithyou: "https://myanimelist.net/images/characters/13/441133.jpg",
+  "5centimeterspersecond": "https://myanimelist.net/images/characters/10/56152.jpg",
+  nana: "https://myanimelist.net/images/characters/7/28355.jpg"
 };
 
 const PROTAGONIST_QUOTES = {
@@ -1829,6 +2373,7 @@ const PROTAGONIST_QUOTES = {
   asilentvoicethemovie: "I want to live and face everyone.",
   barefootgen: "Even in ashes, we keep walking.",
   yourlieinapril: "Maybe there's only a dark road ahead, but still, you keep going.",
+  darlinginthefranxx: "I found you, my darling.",
   onepiece: "I'm going to be King of the Pirates!",
   bleachthousandyearbloodwar: "If fate is a millstone, then we are the grist.",
   deathnote: "I am justice.",
@@ -1862,7 +2407,20 @@ const PROTAGONIST_QUOTES = {
   fruitsbasket: "Maybe there are no limits to how much one can love.",
   kaguyasamaloveiswar: "How cute.",
   toradora: "I hate waiting, but if waiting means being with you, I'll wait forever.",
-  horimiya: "I like the person I am when I'm with you."
+  horimiya: "I like the person I am when I'm with you.",
+  kaijuno8: "I'm not done yet.",
+  haikyu: "Fly.",
+  hajimenoippo: "Not everyone who works hard is rewarded, but everyone who succeeds has worked hard.",
+  gintama: "The night is darkest just before dawn.",
+  mobpsycho100: "If everyone is not special, maybe you can be what you want.",
+  psychopass: "The law doesn't protect the people. People protect the law.",
+  parasytethemaxim: "Humans are interesting creatures.",
+  bluelock: "I'll devour you.",
+  thesevendeadlysins: "If it means protecting my friends, I'd fight gods.",
+  suzume: "I have to go. I have to close that door.",
+  weatheringwithyou: "I want you more than any blue sky!",
+  "5centimeterspersecond": "How fast do I have to live to see you again?",
+  nana: "Hey Nana, if there is a next life, can we be friends again?"
 };
 
 const LOCAL_IMAGE_FALLBACK = "./anime-fallback.svg";
@@ -1925,9 +2483,7 @@ const animeSuggestions = document.getElementById("animeSuggestions");
 const findAnimeBtn = document.getElementById("findAnimeBtn");
 const animeSelect = document.getElementById("animeSelect");
 const sourceSelect = document.getElementById("sourceSelect");
-const readInlineBtn = document.getElementById("readInlineBtn");
 const openTabBtn = document.getElementById("openTabBtn");
-const mangaFrame = document.getElementById("mangaFrame");
 const readerPanel = document.querySelector(".reader-panel");
 const learningPanel = document.getElementById("learningPanel");
 const learningTitle = document.getElementById("learningTitle");
@@ -1955,9 +2511,9 @@ let currentLearningSectionId = null;
 
 const CONTEXT_SECTION_MAP = {
   masterpiece: { id: "masterpieceSection", label: "My Fav 5 masterpieces of all time" },
-  favorite: { id: "myFavSection", label: "My Favourite" },
+  favorite: { id: "myFavSection", label: "Best Anime series" },
   lighthearted: { id: "lightheartedSection", label: "Top 10 light hearted Animes" },
-  love: { id: "loveSection", label: "Top 10 Love Stories" },
+  love: { id: "loveSection", label: "Best Anime Love Stories Ever" },
   void: { id: "voidSection", label: "Animes That Create a Void Inside You" },
   series: { id: "seriesSection", label: "Top 10 Anime Series basis imdb rating" },
   movie: { id: "moviesSection", label: "Top 10 Anime Movies basis imdb rating" }
@@ -2046,27 +2602,155 @@ function watchSourcesFor(title) {
   const q = encodeURIComponent(title);
   return [
     {
-      label: "Watch Free/Legal (JustWatch)",
-      url: `https://www.justwatch.com/us/search?q=${q}`
+      label: "Watch In India (JustWatch)",
+      url: `https://www.justwatch.com/in/search?q=${q}`
     },
     {
-      label: "YouTube Official Search",
-      url: `https://www.youtube.com/results?search_query=${encodeURIComponent(`${title} official anime`)}`
+      label: "YouTube Legal/Free (India)",
+      url: `https://www.youtube.com/results?search_query=${encodeURIComponent(`${title} official anime free india`)}`
     }
   ];
 }
 
-function sourceLinksFor(item) {
-  if (Array.isArray(item.mangaSources) && item.mangaSources.length > 0) {
-    return item.mangaSources;
+const FREE_MANGA_LINKS_BY_KEY = {
+  onepiece: [{ label: "MANGA Plus (Free Legal Chapters)", url: "https://mangaplus.shueisha.co.jp/titles/100020" }],
+  hunterxhunter: [
+    {
+      label: "MANGA Plus (Free Legal Chapters)",
+      url: "https://mangaplus.shueisha.co.jp/search_result?keyword=Hunter%20x%20Hunter"
+    }
+  ],
+  bleachthousandyearbloodwar: [
+    { label: "MANGA Plus (Free Legal Chapters)", url: "https://mangaplus.shueisha.co.jp/search_result?keyword=Bleach" }
+  ],
+  deathnote: [
+    { label: "MANGA Plus (Free Legal Chapters)", url: "https://mangaplus.shueisha.co.jp/search_result?keyword=Death%20Note" }
+  ],
+  dragonballz: [
+    { label: "MANGA Plus (Free Legal Chapters)", url: "https://mangaplus.shueisha.co.jp/search_result?keyword=Dragon%20Ball" }
+  ],
+  naruto: [{ label: "MANGA Plus (Free Legal Chapters)", url: "https://mangaplus.shueisha.co.jp/search_result?keyword=Naruto" }],
+  narutoshippuden: [
+    { label: "MANGA Plus (Free Legal Chapters)", url: "https://mangaplus.shueisha.co.jp/search_result?keyword=Naruto" }
+  ],
+  jujutsukaisen: [
+    { label: "MANGA Plus (Free Legal Chapters)", url: "https://mangaplus.shueisha.co.jp/search_result?keyword=Jujutsu%20Kaisen" }
+  ],
+  demonslayerkimetsunoyaiba: [
+    {
+      label: "MANGA Plus (Free Legal Chapters)",
+      url: "https://mangaplus.shueisha.co.jp/search_result?keyword=Demon%20Slayer"
+    }
+  ],
+  demonslayerkimetsunoyaibathemoviemugentrain: [
+    {
+      label: "MANGA Plus (Free Legal Chapters)",
+      url: "https://mangaplus.shueisha.co.jp/search_result?keyword=Demon%20Slayer"
+    }
+  ],
+  blackclover: [
+    { label: "MANGA Plus (Free Legal Chapters)", url: "https://mangaplus.shueisha.co.jp/search_result?keyword=Black%20Clover" }
+  ],
+  spyxfamily: [{ label: "MANGA Plus (Free Legal Chapters)", url: "https://mangaplus.shueisha.co.jp/search_result?keyword=Spy%20x%20Family" }],
+  kaguyasamaloveiswar: [
+    {
+      label: "MANGA Plus (Free Legal Chapters)",
+      url: "https://mangaplus.shueisha.co.jp/search_result?keyword=Kaguya-sama%20Love%20is%20War"
+    }
+  ],
+  kaijuno8: [
+    {
+      label: "MANGA Plus (Free Legal Chapters)",
+      url: "https://mangaplus.shueisha.co.jp/search_result?keyword=Kaiju%20No.%208"
+    }
+  ]
+};
+
+function dedupeSources(sources) {
+  const seen = new Set();
+  return sources.filter((source) => {
+    if (!source || !source.url) {
+      return false;
+    }
+    if (seen.has(source.url)) {
+      return false;
+    }
+    seen.add(source.url);
+    return true;
+  });
+}
+
+function indiaFreeMangaSourcesFor(item) {
+  const key = normalizeTitle(item.title);
+  const mappedKey = TITLE_ALIASES[key] || key;
+  const mappedFree = FREE_MANGA_LINKS_BY_KEY[mappedKey] || [];
+
+  if (!mappedFree.length) {
+    return [];
   }
 
+  return dedupeSources(mappedFree);
+}
+
+function indiaPaidMangaSourcesFor(item) {
+  const q = encodeURIComponent(`${item.title} manga`);
   return [
+    {
+      label: "Google Books (Read/Preview Search)",
+      url: `https://www.google.com/search?tbm=bks&q=${q}`
+    },
+    {
+      label: "Google Play Books (Digital Read/Preview)",
+      url: `https://play.google.com/store/search?q=${q}&c=books`
+    }
+  ];
+}
+
+function isStoreLikeSource(source) {
+  const url = (source?.url || "").toLowerCase();
+  return (
+    url.includes("amazon.") ||
+    url.includes("flipkart.") ||
+    url.includes("store.crunchyroll.com") ||
+    url.includes("bookwalker.")
+  );
+}
+
+function sourceLinksFor(item) {
+  const freeIndiaSources = indiaFreeMangaSourcesFor(item);
+  const verifiedFreeIndiaSources = freeIndiaSources.filter(
+    (source) => source && source.url && !source.url.includes("search_result")
+  );
+  const freeFinderSources = freeIndiaSources.filter(
+    (source) => source && source.url && source.url.includes("search_result")
+  );
+  const indiaPaidSources = indiaPaidMangaSourcesFor(item);
+  const existingOfficial = Array.isArray(item.mangaSources) && item.mangaSources.length > 0
+    ? item.mangaSources
+    : [
     {
       label: "Crunchyroll Store",
       url: `https://store.crunchyroll.com/search?q=${encodeURIComponent(`${item.title} manga`)}`
     }
   ];
+  const existingReaderFriendly = existingOfficial.filter((source) => !isStoreLikeSource(source));
+  const existingStoreLike = existingOfficial.filter((source) => isStoreLikeSource(source));
+
+  if (verifiedFreeIndiaSources.length) {
+    return dedupeSources([
+      ...verifiedFreeIndiaSources,
+      ...indiaPaidSources,
+      ...existingReaderFriendly,
+      ...freeFinderSources
+    ]);
+  }
+
+  return dedupeSources([
+    ...indiaPaidSources,
+    ...existingReaderFriendly,
+    ...freeFinderSources,
+    ...existingStoreLike
+  ]);
 }
 
 function snapshotItem(item) {
@@ -2261,6 +2945,139 @@ function jumpToAnimeFromSearch() {
   highlightAnimeCard(card);
 }
 
+function sentenceFragmentsCount(value) {
+  const text = String(value || "").trim();
+  if (!text) {
+    return 0;
+  }
+  return text
+    .split(/[.!?]+/)
+    .map((part) => part.trim())
+    .filter(Boolean).length;
+}
+
+function appendNarrativeLayer(baseText, extraText) {
+  const base = String(baseText || "").trim();
+  const extra = String(extraText || "").trim();
+  if (!base) {
+    return extra;
+  }
+  if (!extra) {
+    return base;
+  }
+  const baseLower = base.toLowerCase();
+  if (baseLower.includes(extra.toLowerCase())) {
+    return base;
+  }
+  const separator = /[.!?]$/.test(base) ? " " : ". ";
+  return `${base}${separator}${extra}`;
+}
+
+function protagonistNameFromLine(value) {
+  const raw = String(value || "").trim();
+  if (!raw) {
+    return "The protagonist";
+  }
+  const marker = raw.toLowerCase().indexOf(" teaches");
+  if (marker > 0) {
+    return raw.slice(0, marker).trim();
+  }
+  return raw.split(".")[0].trim() || "The protagonist";
+}
+
+function polishLearningEntry(entry, item, context) {
+  const polished = { ...entry };
+  const title = item?.title || "This anime";
+  const protagonist = protagonistNameFromLine(polished.protagonist);
+  const isLove = context === "love";
+  const isVoid = context === "void";
+  const isLighthearted = context === "lighthearted";
+
+  const aboutLayer = isLove
+    ? `${title} feels emotionally authentic because romance and personal growth evolve together instead of feeling forced.`
+    : isVoid
+      ? `${title} stays with you because its emotional peaks come with real consequence, not surface-level tragedy.`
+      : isLighthearted
+        ? `${title} works as comfort content because its warmth feels earned through character chemistry and emotional sincerity.`
+        : `${title} becomes memorable because its conflict keeps testing identity, values, and emotional maturity.`;
+
+  const teachesLayer = isLove
+    ? "Its core lesson is that love is not just intensity; it is consistency, accountability, and emotional courage over time."
+    : isVoid
+      ? "Its deepest teaching is that grief can destroy you or refine you, depending on whether you choose avoidance or growth."
+      : isLighthearted
+        ? "Its teaching lands in daily life: joy, patience, and healthy connection are real strengths, not minor emotions."
+        : "The practical lesson is to align decisions with values, especially when pressure makes shortcuts look attractive.";
+
+  const impactLayer = isLove
+    ? "After watching, people often re-evaluate communication, timing, and emotional responsibility in their own relationships."
+    : isVoid
+      ? "Its after-effect is usually introspective silence, where viewers process loss, identity, and the cost of emotional truth."
+      : isLighthearted
+        ? "Its real-life value is recovery: it gently resets emotional bandwidth and helps people return to life with steadier energy."
+        : "Its long-term impact is reflective: it encourages better self-audit, healthier boundaries, and more intentional choices.";
+
+  const protagonistLayer = `${protagonist} feels compelling because the lesson is earned through setbacks, humility, and visible growth.`;
+
+  if (sentenceFragmentsCount(polished.about) < 2 || String(polished.about || "").length < 170) {
+    polished.about = appendNarrativeLayer(polished.about, aboutLayer);
+  }
+  if (sentenceFragmentsCount(polished.teaches) < 2 || String(polished.teaches || "").length < 165) {
+    polished.teaches = appendNarrativeLayer(polished.teaches, teachesLayer);
+  }
+  if (sentenceFragmentsCount(polished.impact) < 2 || String(polished.impact || "").length < 165) {
+    polished.impact = appendNarrativeLayer(polished.impact, impactLayer);
+  }
+  if (sentenceFragmentsCount(polished.protagonist) < 2 || String(polished.protagonist || "").length < 120) {
+    polished.protagonist = appendNarrativeLayer(polished.protagonist, protagonistLayer);
+  }
+
+  if (Array.isArray(polished.characters)) {
+    polished.characters = polished.characters
+      .map((line) => {
+        const cleaned = String(line || "").trim();
+        if (!cleaned) {
+          return "";
+        }
+        return /[.!?]$/.test(cleaned) ? cleaned : `${cleaned}.`;
+      })
+      .filter(Boolean);
+  }
+
+  if (isVoid) {
+    const voidLayer =
+      "The emotional damage lands because hope and pain are interwoven so tightly that even beautiful moments carry aftershock.";
+    if (sentenceFragmentsCount(polished.voidReason) < 2 || String(polished.voidReason || "").length < 165) {
+      polished.voidReason = appendNarrativeLayer(polished.voidReason, voidLayer);
+    }
+  }
+
+  if (isLighthearted) {
+    const smileLayer =
+      "That smile lasts because the story gives comfort without becoming shallow, and its characters feel like people you want to spend time with.";
+    if (sentenceFragmentsCount(polished.smileReason) < 2 || String(polished.smileReason || "").length < 155) {
+      polished.smileReason = appendNarrativeLayer(polished.smileReason, smileLayer);
+    }
+  }
+
+  if (isLove) {
+    if (sentenceFragmentsCount(polished.loveFeelsReal) < 2 || String(polished.loveFeelsReal || "").length < 155) {
+      polished.loveFeelsReal = appendNarrativeLayer(
+        polished.loveFeelsReal,
+        "What makes it work is emotional consequence: choices change relationships, and the story does not hide that cost."
+      );
+    }
+    if (sentenceFragmentsCount(polished.afterWatchFeeling) < 2 || String(polished.afterWatchFeeling || "").length < 120) {
+      polished.afterWatchFeeling = appendNarrativeLayer(
+        polished.afterWatchFeeling,
+        "It usually leaves viewers replaying key scenes because the emotional arcs feel personal rather than performative."
+      );
+    }
+  }
+
+  return polished;
+}
+
 function getLearningEntry(item, context) {
   const key = normalizeTitle(item.title);
   const mappedKey = TITLE_ALIASES[key] || key;
@@ -2292,39 +3109,43 @@ function getLearningEntry(item, context) {
       watchNext: "Your Name."
     };
 
-    return {
+    const rawEntry = {
       entryKey: mappedKey,
       ...base,
       ...characters,
       ...loveTags
     };
+    return polishLearningEntry(rawEntry, item, context);
   }
 
   if (context === "void" && !base.voidReason) {
-    return {
+    const rawEntry = {
       entryKey: mappedKey,
       ...base,
       ...characters,
       voidReason:
         "This one can still leave a deep emotional void because its most hopeful moments are tied to difficult loss, reflection, and after-credits silence."
     };
+    return polishLearningEntry(rawEntry, item, context);
   }
 
   if (context === "lighthearted" && !base.smileReason) {
-    return {
+    const rawEntry = {
       entryKey: mappedKey,
       ...base,
       ...characters,
       smileReason:
         "It puts a smile on your face with cozy energy, lovable characters, and moments that feel comforting from start to end."
     };
+    return polishLearningEntry(rawEntry, item, context);
   }
 
-  return {
+  const rawEntry = {
     entryKey: mappedKey,
     ...base,
     ...characters
   };
+  return polishLearningEntry(rawEntry, item, context);
 }
 
 function protagonistImageFor(entry, item) {
@@ -2616,10 +3437,7 @@ function attachCardButtons(container) {
     button.addEventListener("click", () => {
       animeSelect.value = button.dataset.openReader;
       hydrateSourceSelect();
-      const opened = openSelectedSourceNewTab();
-      if (!opened) {
-        openSelectedSourceInline();
-      }
+      openSelectedSourceNewTab();
       if (readerPanel) {
         readerPanel.scrollIntoView({ behavior: "smooth", block: "start" });
       }
@@ -2733,22 +3551,20 @@ function hydrateSourceSelect() {
     .join("");
 }
 
-function openSelectedSourceInline() {
-  const url = sourceSelect.value;
-  if (!url) {
-    return false;
-  }
-  mangaFrame.src = url;
-  return true;
-}
-
 function openSelectedSourceNewTab() {
   const url = sourceSelect.value;
   if (!url) {
     return false;
   }
-  const popup = window.open(url, "_blank", "noopener,noreferrer");
-  return Boolean(popup);
+  const link = document.createElement("a");
+  link.href = url;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.style.display = "none";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  return true;
 }
 
 function easeInOutCubic(progress) {
@@ -2903,11 +3719,11 @@ async function loadAllSections({ force = false } = {}) {
   refreshBtn.disabled = true;
   seriesStatusBanner.textContent = force ? "Refreshing anime series rankings..." : "Loading anime series rankings...";
   movieStatusBanner.textContent = force ? "Refreshing anime movie rankings..." : "Loading anime movie rankings...";
-  tabsFavStatusBanner.textContent = "Refreshing My Favourite list...";
+  tabsFavStatusBanner.textContent = "Refreshing Best Anime series list...";
   masterpieceStatusBanner.textContent = "Refreshing My Fav 5 masterpieces of all time...";
   voidStatusBanner.textContent = "Refreshing emotional anime list...";
   lightheartedStatusBanner.textContent = "Refreshing light hearted anime picks...";
-  loveStatusBanner.textContent = "Refreshing Top 10 Love Stories...";
+  loveStatusBanner.textContent = "Refreshing Best Anime Love Stories Ever...";
 
   const [seriesSet, movieSet, extraSet] = await Promise.all([
     loadItemSet(TV_CANDIDATES),
@@ -2931,7 +3747,7 @@ async function loadAllSections({ force = false } = {}) {
   seriesStatusBanner.textContent = describeLiveStatus("Anime series", seriesSet.liveCount, seriesSet.total);
   movieStatusBanner.textContent = describeLiveStatus("Anime movies", movieSet.liveCount, movieSet.total);
   tabsFavStatusBanner.textContent =
-    "My Favourite: this list is purely based on my personal choice and what I genuinely love watching.";
+    "Best Anime series: this list is purely based on my personal choice and what I genuinely love watching.";
   masterpieceStatusBanner.textContent =
     "My Fav 5 masterpieces of all time: these 5 titles are my personal all-time masterpieces.";
   voidStatusBanner.textContent =
@@ -2939,7 +3755,7 @@ async function loadAllSections({ force = false } = {}) {
   lightheartedStatusBanner.textContent =
     "Top 10 light hearted Animes: smile-first picks for cozy, uplifting, low-stress watching.";
   loveStatusBanner.textContent =
-    "Top 10 Love Stories: movies first, then series, with deep life lessons and emotional takeaways.";
+    "Best Anime Love Stories Ever: movies first, then series, with deep life lessons and emotional takeaways.";
 
   const allLive = [seriesSet, movieSet, extraSet].every((set) => set.liveCount === set.total);
   if (allLive) {
@@ -2981,7 +3797,6 @@ if (globalAnimeSearch) {
   });
 }
 animeSelect.addEventListener("change", hydrateSourceSelect);
-readInlineBtn.addEventListener("click", openSelectedSourceInline);
 openTabBtn.addEventListener("click", openSelectedSourceNewTab);
 if (backToTopBtn) {
   backToTopBtn.addEventListener("click", async () => {
