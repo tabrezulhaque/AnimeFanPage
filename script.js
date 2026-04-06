@@ -2395,6 +2395,27 @@ function hideLessonHoverPreview({ clearTouchState = true } = {}) {
   }
 }
 
+function openTouchPreviewTarget(event) {
+  if (supportsHover || !touchPreviewTarget) {
+    return;
+  }
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
+  const itemId = touchPreviewTarget.itemId;
+  const context = touchPreviewTarget.context || "";
+  const item = state.itemById.get(itemId);
+  if (!item) {
+    hideLessonHoverPreview();
+    return;
+  }
+
+  hideLessonHoverPreview();
+  showLearnings(item, context);
+}
+
 function showLessonHoverPreview(button, event, { touchMode = false } = {}) {
   const item = state.itemById.get(button.dataset.learning);
   if (!item) {
@@ -2625,9 +2646,22 @@ function attachCardButtons(container) {
 
       if (!supportsHover) {
         event.preventDefault();
+        const context = button.dataset.context || "";
+        const alreadyTargeted =
+          touchPreviewTarget &&
+          touchPreviewTarget.itemId === item.imdbId &&
+          touchPreviewTarget.context === context &&
+          lessonHoverPreview.classList.contains("is-visible");
+
+        if (alreadyTargeted) {
+          hideLessonHoverPreview();
+          showLearnings(item, context);
+          return;
+        }
+
         touchPreviewTarget = {
           itemId: item.imdbId,
-          context: button.dataset.context || ""
+          context
         };
         showLessonHoverPreview(button, event, { touchMode: true });
         clearLessonHoverAutoHide();
@@ -2980,20 +3014,8 @@ if (backToCurrentSectionBtn) {
 }
 window.addEventListener("scroll", hideLessonHoverPreview, { passive: true });
 window.addEventListener("resize", hideLessonHoverPreview);
-lessonHoverPreview.addEventListener("click", (event) => {
-  if (supportsHover || !touchPreviewTarget) {
-    return;
-  }
-  event.preventDefault();
-  const item = state.itemById.get(touchPreviewTarget.itemId);
-  if (!item) {
-    hideLessonHoverPreview();
-    return;
-  }
-  const context = touchPreviewTarget.context || "";
-  hideLessonHoverPreview();
-  showLearnings(item, context);
-});
+lessonHoverPreview.addEventListener("click", openTouchPreviewTarget);
+lessonHoverPreview.addEventListener("touchend", openTouchPreviewTarget, { passive: false });
 document.addEventListener(
   "touchstart",
   (event) => {
