@@ -788,6 +788,41 @@ const EXTRA_LIBRARY_ITEMS = [
         url: "https://www.google.com/search?q=the+seven+deadly+sins+manga+official+read"
       }
     ]
+  },
+  {
+    imdbId: "tt5607616",
+    title: "Re:ZERO -Starting Life in Another World-",
+    year: 2016,
+    image:
+      "https://myanimelist.net/images/anime/1522/128039l.jpg",
+    fallbackRating: 8.0,
+    fallbackVotes: 43000,
+    mangaSources: [
+      { label: "Yen Press Search", url: "https://yenpress.com/search?q=re%3Azero" },
+      {
+        label: "Official Read Search",
+        url: "https://www.google.com/search?q=Re%3AZERO+starting+life+in+another+world+manga+official+read"
+      }
+    ]
+  },
+  {
+    imdbId: "tt13293588",
+    title: "Mushoku Tensei: Jobless Reincarnation",
+    year: 2021,
+    image:
+      "https://myanimelist.net/images/anime/1530/117776l.jpg",
+    fallbackRating: 8.3,
+    fallbackVotes: 52000,
+    mangaSources: [
+      {
+        label: "Seven Seas (Official)",
+        url: "https://sevenseasentertainment.com/series/mushoku-tensei-jobless-reincarnation/"
+      },
+      {
+        label: "Official Read Search",
+        url: "https://www.google.com/search?q=Mushoku+Tensei+Jobless+Reincarnation+manga+official+read"
+      }
+    ]
   }
 ];
 
@@ -798,6 +833,7 @@ const TABS_FAVOURITE_LIST = [
   "Monster",
   "Hunter x Hunter",
   "Fullmetal Alchemist",
+  "Frieren",
   "cyberpunk edge runners",
   "Code Geas",
   "Jujutsu Kaisen",
@@ -806,8 +842,10 @@ const TABS_FAVOURITE_LIST = [
   "Erased",
   "Steins: Gate",
   "Kaiju No. 8",
+  "Re:Zero",
   "Haikyu!!",
   "Violet evergarden",
+  "Mushoku Tensei: Jobless Reincarnation",
   "Naruto",
   "Black clover",
   "Hajimo no ippo",
@@ -868,6 +906,7 @@ const LOVE_STORY_LIST = [
 
 const TITLE_ALIASES = {
   fullmetalalchemist: "fullmetalalchemistbrotherhood",
+  frieren: "frierenbeyondjourneysend",
   cyberpunkedgerunners: "cyberpunkedgerunners",
   codegeas: "codegeass",
   steinsgate: "steinsgate",
@@ -896,7 +935,14 @@ const TITLE_ALIASES = {
   tenkinoko: "weatheringwithyou",
   byousoku5centimeter: "5centimeterspersecond",
   darlinginfranx: "darlinginthefranxx",
-  darlinginthefranx: "darlinginthefranxx"
+  darlinginthefranx: "darlinginthefranxx",
+  rezero: "rezerostartinglifeinanotherworld",
+  rezerostartinglifeinanotherworld: "rezerostartinglifeinanotherworld",
+  mushokutensei: "mushokutenseijoblessreincarnation",
+  mushokotensei: "mushokutenseijoblessreincarnation",
+  mushikotensie: "mushokutenseijoblessreincarnation",
+  mushokutensie: "mushokutenseijoblessreincarnation",
+  joblessreincarnation: "mushokutenseijoblessreincarnation"
 };
 
 const MASTERPIECE_WRITEUPS = {
@@ -1291,12 +1337,30 @@ const LEARNINGS = {
   },
   frierenbeyondjourneysend: {
     about:
-      "A reflective fantasy that begins after the hero's journey and asks what remains when time keeps moving but people do not.",
+      "A reflective fantasy that begins after the legendary quest has already ended, then asks what grief, memory, and regret look like across immortal time. Instead of chasing constant spectacle, it studies the emotional afterlife of relationships and the quiet cost of realizing love too late.",
     teaches:
-      "It teaches emotional presence, gratitude for ordinary moments, and the importance of valuing people before they become memory.",
+      "It teaches emotional presence, deliberate gratitude, and the discipline of showing care before loss forces perspective. It also teaches that maturity is often retrospective: we understand people more deeply after they are gone, and that realization should change how we love now.",
     impact:
-      "It changes how viewers relate to time, often making relationships and daily kindness feel more urgent and meaningful.",
-    emotionalDepth: "9.0/10"
+      "It changes how viewers relate to time and attention, often making ordinary conversations, small rituals, and gentle kindness feel profoundly meaningful. In real life, it nudges people toward fewer assumptions, slower listening, and expressing appreciation while there is still time to be heard.",
+    emotionalDepth: "9.3/10"
+  },
+  rezerostartinglifeinanotherworld: {
+    about:
+      "A psychological fantasy where Subaru is trapped in a death-loop mechanic that forces him to carry trauma no one else remembers. Beneath the isekai setup, it is a raw story about failure, shame, panic, dependency, and the slow rebuilding of self-worth through trust.",
+    teaches:
+      "It teaches that courage is not looking fearless, but returning after collapse with more honesty than before. It also teaches that asking for help is a strength, because isolation turns pain into delusion while connection turns pain into direction.",
+    impact:
+      "It resonates deeply with viewers who have lived through anxiety, burnout, or repeated setbacks, because it validates emotional breakdown without romanticizing it. In real life, it encourages emotional regulation, humility, and the discipline to keep trying after public or private failure.",
+    emotionalDepth: "9.2/10"
+  },
+  mushokutenseijoblessreincarnation: {
+    about:
+      "A second-life redemption arc where a deeply damaged man is given another chance and forced to confront the habits that ruined his first life. The series blends expansive world-building with uncomfortable but honest growth, showing that maturity is earned through repeated correction, not one dramatic moment.",
+    teaches:
+      "It teaches that personal change is a long process built from daily choices, accountability, and uncomfortable self-examination. It also teaches that talent and opportunity mean little if character does not evolve with them.",
+    impact:
+      "For many viewers, it reframes what growth actually looks like: messy, non-linear, and sometimes frustrating before it becomes admirable. Its real-life impact is motivational when taken seriously, because it pushes you to start improving now instead of waiting for a perfect version of yourself.",
+    emotionalDepth: "8.9/10"
   },
   dragonballz: {
     about:
@@ -1932,11 +1996,30 @@ const CHARACTER_LESSONS = {
     ]
   },
   frierenbeyondjourneysend: {
-    protagonist: "Frieren teaches valuing people while there is still time.",
+    protagonist:
+      "Frieren teaches that emotional wisdom is not automatic with age; it comes from choosing to remember, to understand, and to care before time takes the chance away.",
     characters: [
-      "Fern teaches consistency and emotional maturity.",
-      "Stark teaches courage despite fear.",
-      "Himmel teaches kindness as a daily choice."
+      "Fern teaches consistency, emotional restraint, and the quiet dignity of loving someone through discipline rather than dramatic words.",
+      "Stark teaches that courage is not the absence of fear, but acting with sincerity while fear is still present.",
+      "Himmel teaches that kindness becomes legacy when practiced in small acts, long before anyone calls it heroic."
+    ]
+  },
+  rezerostartinglifeinanotherworld: {
+    protagonist:
+      "Subaru Natsuki teaches that real strength begins when ego breaks and you choose vulnerability, discipline, and responsibility anyway.",
+    characters: [
+      "Emilia teaches principled kindness under prejudice, and how dignity survives even when the world misjudges you.",
+      "Rem teaches loyal love, but also the danger of tying your identity entirely to another person.",
+      "Beatrice teaches that healing often begins when you stop waiting to be saved perfectly and allow imperfect connection."
+    ]
+  },
+  mushokutenseijoblessreincarnation: {
+    protagonist:
+      "Rudeus Greyrat teaches that redemption is not one apology, but years of changing behavior, owning consequences, and choosing growth every day.",
+    characters: [
+      "Roxy Migurdia teaches patient mentorship and how one encouraging voice can restart a broken life.",
+      "Eris Boreas Greyrat teaches emotional intensity maturing into discipline, accountability, and earned respect.",
+      "Sylphiette teaches quiet devotion, emotional safety, and the strength of steadfast support during identity repair."
     ]
   },
   dragonballz: {
@@ -2305,6 +2388,8 @@ const PROTAGONIST_IMAGES = {
   deathnote: "https://myanimelist.net/images/characters/6/63870.jpg",
   cowboybebop: "https://myanimelist.net/images/characters/11/516853.jpg",
   frierenbeyondjourneysend: "https://myanimelist.net/images/characters/7/525105.jpg",
+  rezerostartinglifeinanotherworld: "https://myanimelist.net/images/anime/1522/128039l.jpg",
+  mushokutenseijoblessreincarnation: "https://myanimelist.net/images/anime/1530/117776l.jpg",
   dragonballz: "https://myanimelist.net/images/characters/14/401183.jpg",
   narutoshippuden: "https://myanimelist.net/images/characters/2/284121.jpg",
   spiritedaway: "https://myanimelist.net/images/characters/7/434512.jpg",
@@ -2379,6 +2464,8 @@ const PROTAGONIST_QUOTES = {
   deathnote: "I am justice.",
   cowboybebop: "Whatever happens, happens.",
   frierenbeyondjourneysend: "People are quick to die.",
+  rezerostartinglifeinanotherworld: "I can return by death.",
+  mushokutenseijoblessreincarnation: "This time, I'm going to live seriously.",
   dragonballz: "Power comes in response to a need.",
   narutoshippuden: "I won't let my comrades die.",
   spiritedaway: "I finally get a bouquet and it's a goodbye present.",
@@ -2519,7 +2606,7 @@ const CONTEXT_SECTION_MAP = {
   userFavorite: { id: "myDeviceFavouritesSection", label: "My Watchlist" },
   masterpiece: { id: "masterpieceSection", label: "My Fav 5 masterpieces of all time" },
   favorite: { id: "myFavSection", label: "Best Anime series" },
-  lighthearted: { id: "lightheartedSection", label: "Top 10 light hearted Animes" },
+  lighthearted: { id: "lightheartedSection", label: "Best light hearted Animes" },
   love: { id: "loveSection", label: "Best Anime Love Stories Ever" },
   void: { id: "voidSection", label: "Animes That Create a Void Inside You" },
   series: { id: "seriesSection", label: "Top 10 Anime Series basis imdb rating" },
@@ -3919,9 +4006,9 @@ async function loadAllSections({ force = false } = {}) {
   masterpieceStatusBanner.textContent =
     "My Fav 5 masterpieces of all time: these 5 titles are my personal all-time masterpieces.";
   voidStatusBanner.textContent =
-    "Animes That Create a Void Inside You: this list is purely based on my personal feelings after finishing these.";
+    "Animes That Create a Void Inside You: emotionally intense stories that stay with you long after the ending.";
   lightheartedStatusBanner.textContent =
-    "Top 10 light hearted Animes: smile-first picks for cozy, uplifting, low-stress watching.";
+    "Best light hearted Animes: smile-first picks for cozy, uplifting, low-stress watching.";
   loveStatusBanner.textContent =
     "Best Anime Love Stories Ever: movies first, then series, with deep life lessons and emotional takeaways.";
 
