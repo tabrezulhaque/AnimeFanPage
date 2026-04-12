@@ -3252,14 +3252,6 @@ function polishLearningEntry(entry, item, context) {
       .filter(Boolean);
   }
 
-  if (isVoid) {
-    const voidLayer =
-      "The emotional damage lands because hope and pain are interwoven so tightly that even beautiful moments carry aftershock.";
-    if (sentenceFragmentsCount(polished.voidReason) < 2 || String(polished.voidReason || "").length < 165) {
-      polished.voidReason = appendNarrativeLayer(polished.voidReason, voidLayer);
-    }
-  }
-
   if (isLighthearted) {
     const smileLayer =
       "That smile lasts because the story gives comfort without becoming shallow, and its characters feel like people you want to spend time with.";
@@ -3327,12 +3319,14 @@ function getLearningEntry(item, context) {
   }
 
   if (context === "void" && !base.voidReason) {
+    const baseAbout = firstSentence(base.about, `${item.title} carries heavy emotional consequence`);
+    const baseImpact = firstSentence(base.impact, "its aftermath lingers long after the credits");
     const rawEntry = {
       entryKey: mappedKey,
       ...base,
       ...characters,
       voidReason:
-        "This one can still leave a deep emotional void because its most hopeful moments are tied to difficult loss, reflection, and after-credits silence."
+        `${item.title} can leave a void because ${lowerFirst(baseAbout)}. The ache remains because ${lowerFirst(baseImpact)}.`
     };
     return polishLearningEntry(rawEntry, item, context);
   }
@@ -3383,6 +3377,53 @@ function protagonistQuoteFor(entry) {
     return quote;
   }
   return "Every scar can become strength.";
+}
+
+function firstSentence(value, fallback = "") {
+  const text = String(value || "").trim().replace(/\s+/g, " ");
+  if (!text) {
+    return fallback;
+  }
+  const match = text.match(/[^.!?]+[.!?]?/);
+  return (match ? match[0] : text).trim();
+}
+
+function lowerFirst(value) {
+  const text = String(value || "").trim();
+  if (!text) {
+    return "";
+  }
+  return text.charAt(0).toLowerCase() + text.slice(1);
+}
+
+function fallbackBreakReason(entry, item) {
+  const title = item?.title || "This anime";
+  const aboutSentence = firstSentence(
+    entry?.about,
+    `${title} pushes its characters into hard emotional choices`
+  );
+  const protagonistSentence = firstSentence(
+    entry?.protagonist,
+    "The protagonist grows by carrying emotional cost instead of avoiding it"
+  );
+  const impactSentence = firstSentence(
+    entry?.impact,
+    "The emotional after-effect stays with you after the ending"
+  );
+  return `${title} can hit emotionally because ${lowerFirst(aboutSentence)}. ${protagonistSentence}. What lingers most is ${lowerFirst(impactSentence)}.`;
+}
+
+function fallbackSmileReason(entry, item) {
+  const title = item?.title || "This anime";
+  const aboutSentence = firstSentence(
+    entry?.about,
+    `${title} is built around warm character chemistry and emotional comfort`
+  );
+  const teachesSentence = firstSentence(
+    entry?.teaches,
+    "Its lessons feel gentle and uplifting in day-to-day life"
+  );
+  return `${title} puts a smile on your face because ${lowerFirst(aboutSentence)}. It feels comforting because ${lowerFirst(teachesSentence)}.`;
 }
 
 function positionLessonHoverPreview(clientX, clientY) {
@@ -3525,20 +3566,23 @@ function showLearnings(item, context) {
     .join("");
   const isLighthearted = context === "lighthearted";
   const isLove = context === "love";
+  const hasCustomBreakReason = Boolean(entry.voidReason);
   if (learningEmotionHeading) {
     learningEmotionHeading.textContent = isLighthearted
       ? "Why It Puts Smile On Your Face"
-      : "Why It Can Break You Emotionally";
+      : hasCustomBreakReason
+        ? "Why It Can Break You Emotionally"
+        : "Emotional Reflection";
   }
   learningVoidReason.classList.toggle("smile-reason", isLighthearted);
   if (isLighthearted) {
-    learningVoidReason.textContent = entry.smileReason
-      ? `Why It Puts Smile On Your Face: ${entry.smileReason}`
-      : "Why It Puts Smile On Your Face: this title is comforting, funny, and emotionally warm in a way that leaves you lighter.";
+    const smileReasonText = entry.smileReason || fallbackSmileReason(entry, item);
+    learningVoidReason.textContent = `Why It Puts Smile On Your Face: ${smileReasonText}`;
   } else {
-    learningVoidReason.textContent = entry.voidReason
-      ? `Why It Breaks You: ${entry.voidReason}`
-      : "Why It Breaks You: this title may not devastate you in one blow, but it leaves a lasting emotional echo through its values, losses, and character choices.";
+    const breakReasonText = entry.voidReason || fallbackBreakReason(entry, item);
+    learningVoidReason.textContent = hasCustomBreakReason
+      ? `Why It Breaks You: ${breakReasonText}`
+      : `Emotional Reflection: ${breakReasonText}`;
   }
 
   if (loveExtrasBlock) {
